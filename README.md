@@ -1,2 +1,2 @@
-# jjsskingdom.github.io
+# 레오의 고양이 놀이터
 공부할 때 쓰려고 만든 홈페이지
