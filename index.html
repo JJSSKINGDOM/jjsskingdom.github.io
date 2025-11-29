@@ -1,31 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>내 파이썬 프로그램</title>
+    <title>레오의 고양이 놀이</title>
     <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
     <script defer src="https://pyscript.net/latest/pyscript.js"></script>
 </head>
 <body>
-    <h1>파이썬 입력기</h1>
+    <h1>레오의 고양이 놀이터에요</h1>
     <input type="text" id="input_data" placeholder="저장할 내용을 입력하세요">
     <button id="save_btn" py-click="save_file()">내 컴퓨터로 저장</button>
-
-    <py-script>
-        import js
-        from pyscript import Element
-
-        def save_file(*args):
-            # 1. 입력값 가져오기
-            text = Element("input_data").element.value
-            
-            # 2. 가상의 다운로드 링크 만들어서 클릭시키기 (자바스크립트 활용)
-            blob = js.Blob.new([text], {type : 'text/plain'})
-            url = js.URL.createObjectURL(blob)
-            
-            hidden_link = js.document.createElement("a")
-            hidden_link.href = url
-            hidden_link.download = "내_결과물.txt"
-            hidden_link.click()
-    </py-script>
 </body>
 </html>
